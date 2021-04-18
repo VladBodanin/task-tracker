@@ -1,0 +1,22 @@
+server:
+  port: 8098
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tracker?currentSchema=tracker
+    username: tracker
+    password: tracker
+    hikari:
+      connection-timeout: 10000
+      maximum-pool-size: 24
+    initialization-mode: always
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+flyway:
+  enabled: true
+
+rate-service-host: ${RATE_SERVICE_HOST:http://localhost}
