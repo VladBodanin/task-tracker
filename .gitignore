@@ -12,3 +12,5 @@ gen
 /build/
 /out/
 
+/docker-compose/data/
+
